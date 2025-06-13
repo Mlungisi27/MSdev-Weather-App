@@ -3,89 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MSdev : Weather App</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel = "stylesheet">
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h2>MSdev Weather App</h2>
-            <div class="weather-input">
-                <input type="text" name ="city" id="city-input" placeholder="Enter city name">
-                <button type="button" id="searchBtn"><i class="fa-solid fa-search"></i></button>
-                <button type="button" id="locationBtn">
-                    <i class="fa-solid fa-location-crosshairs"></i>Current Location
-                </button>
-            </div>
-        </div>
-        <div class="weather-data">
-            <div class="weather-left">
-                <div class="card">
-                    <div class="current-weather">
-                        <div class="details">
-                            <p>Now</p>
-                            <h2>_&deg;C</h2>
-                            <p>_____</p>
-                        </div>
-                        <div class="weather-icon">
-                            <img src="https://openweathermap.org/img/wn/09d@2x.png" alt="Weather Icon">
-                        </div>
-                        <hr>
-                        <div class="card-footer">
-                            <p><i class="fa-solid fa-calendar"></i>_____</p>
-                            <p><i class="fa-solid fa-location-dot"></i>_____</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <h2>5 days Forecast</h2>
-                <div class="day-forecast">
-                    <div class="forecast-item">
-                        <div class="icon-wrapper">
-                            <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="Weather Icon">
-                            <span>____ &deg;C</span>
-                        </div>
-                        <p>____</p>
-                        <p>____</p>
-                    </div>
-                    <div class="forecast-item">
-                        <div class="icon-wrapper">
-                            <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="Weather Icon">
-                            <span>____ &deg;C</span>
-                        </div>
-                        <p>____</p>
-                        <p>____</p>
-                    </div>
-                    <div class="forecast-item">
-                        <div class="icon-wrapper">
-                            <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather Icon">
-                            <span>____ &deg;C</span>
-                        </div>
-                        <p>____</p>
-                        <p>____</p>
-                    </div>
-                    <div class="forecast-item">
-                        <div class="icon-wrapper">
-                            <img src="https://openweathermap.org/img/wn/03d@2x.png" alt="Weather Icon">
-                            <span>____ &deg;C</span>
-                        </div>
-                        <p>____</p>
-                        <p>____</p>
-                    </div>
-                    <div class="forecast-item">
-                        <div class="icon-wrapper">
-                            <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="Weather Icon">
-                            <span>____ &deg;C</span>
-                        </div>
-                        <p>____</p>
-                        <p>____</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
+    <main>
+        <form action="">
+            <input type="text" autocomplete="off">
+            <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+
+        <section class="results">
+            <figure class="name">
+                <figcaption>Durban</figcaption>
+                <img src="https://flagsapi.com/ZA/shiny/64.png" alt="">
+            </figure>
+            <figure class="temperature">
+                <img src="https://openweathermap.org/img/wn/01d.png" alt="">
+                <figcaption>
+                    <span>31</span>
+                    <sup>°c</sup>
+                </figcaption>
+            </figure>
+            <p class="description">
+                Overcast clouds
+            </p>
+
+            <ul>
+                <li>
+                    <span>Clouds</span>
+                    <i class="fa-solid fa-cloud"></i>
+                    <span>98</span>%
+                </li>
+                <li>
+                    <span>Humidity</span>
+                    <i class="fa-solid fa-droplet"></i>
+                    <span>55</span>%
+                </li>
+                <li>
+                    <span>Pressure</span>
+                    <i class="fa-solid fa-gauge"></i>
+                    <span>1001</span>hPa
+                </li>
+            </ul>
+        </section>
+    </main>
 </body>
 </html>

@@ -1,118 +1,112 @@
-:root {
-    --bg-color1: #212529;
-    --bg--color2:#2a2b2d;
+body {
+    margin: 0%;
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: 
+        linear-gradient(
+            to bottom,
+            #dcdcdc 50%,
+            #e9e9e9 50%,
+        );
+    font-family: sans-serif;
 }
 *{
-    margin: 0;
-    padding:0%;
+    margin: 0%;
+    padding: 0%;
+}
+main {
+    width: 300px;
+    height: max-content;
+    min-height: 300px;
+    background-color: #f7f7f7;
+    border-radius: 30px;
+    box-shadow: 0 30px 50px #5553;
+    padding: 30px;
     box-sizing: border-box;
 }
-body{
-    min-height: 100vh;
-    background-color: var(--bg-color1);
-    color: white;
-    font-family: sans-serif;
-    padding:0 15px;
-}
-.header{
-    position: sticky;
-    top: 0%;
-    background-color: var(--bg-color1);
+main form{
+    border: 1px solid #5553;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-    padding: 15px 0;
+    border-radius: 30px;
 }
-.header #city-input {
-    background-color: var(--bg--color2);
+main form input,
+main form button {
     border: none;
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 25px;
-    color: white;
-}
-.header #city-input:focus {
+    background-color: transparent;
     outline: none;
+    padding: 10px;
 }
-.header #searchBtn {
-    border: none;
-    font-size: 16px;
-    padding: 12px;
-    border-radius: 25px;
-    background-color: white;
-    color: #212529;
-    cursor: pointer;
-    margin-left: 5px;
+main form i{
+    opacity: 0.7;
 }
-.header #locationBtn {
-    border: none;
-    font-size: 16px;
-    padding: 12px;
-    border-radius: 25px;
-    background-color: #de471d;
-    color: white;
-    cursor: pointer;
-    margin-left: 5px;
+main .result .name{
+    font-weight: bold;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+main .temperature img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    filter: drop-shadow(0 0 10px #000);
+}
+main .temperature figcaption {
+    font-size: 3em;
+}
+main .description {
+    padding: 10px 0 30px;
+}
+main ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.name {
     display: flex;
     align-items: center;
-    gap: 5px;
+    justify-content: center;
+    gap: 16px; /* Adjust space between name and flag */
 }
-.card{
-    background-color: var(--bg--color2);
-    padding: 15px;
-    border-radius: 15px;
-    margin-bottom: 15px;
-    & p{
-        font-size: 14px;
-        color:#999;
-    }
-    & h2{
-        font-size: 32px;
-        font-weight: 500;
-    }
+
+.name figcaption {
+    font-weight: bold;
+    font-size: large;
+    margin: 0;
 }
-.container {
-    max-width: 600px;
-    margin: 40px auto;
+
+.name img {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
 }
-.weather-data {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 500px;
+main li{
+    background-color: #f78a55;
+    color: #fff;
+    border-radius: 10px;
+    padding:20px 10px;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 50%,
+        #0003 50%
+    );
+    font-weight: bold;
+    font-size: small;
 }
-.weather.data{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
-    & .weather-left{
-        grid-column: span 1;
-        &.current-weather{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            & h2{
-                margin: 7px 0;
-            }
-            & p{
-                color: white
-            }
-            & .card-footer p{
-                font-size: 14px;
-                margin-bottom: 12px;
-            }
-            & .forcast-item{
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                place-items: center;
-                margin-bottom: 15px;
-                & .icon-wrapper{
-                    display: flex;
-                    align-items: center;
-                }
-            }
-        }
-    }
+main li i{
+    font-size: 2em;
+    display: block !important;
+    margin: 20px 0;
+}
+main li:nth-child(2){
+    background-color: #b56291;
+}
+main li:nth-child(3){
+    background-color: #48567b;
 }
